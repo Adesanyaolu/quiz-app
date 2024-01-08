@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #49E9FF;
+  background-color: #49e9ff;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -47,4 +47,23 @@ body {
   align-items: center;
   margin: 15px;
   padding: 15px;
+}
+
+.game .options {
+  display: flex;
+  flex-direction: row;
+  color: #034a53;
+}
+.game .options .options-tag {
+  background-color: #333333;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  color: azure;
+  width: 10%;
+}
+.game .options .options-text {
+  background-color: azure;
+  width: 90%;
+  padding: 10px 5px;
+  margin: 10px 0px;
 }
