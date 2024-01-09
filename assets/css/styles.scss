@@ -1,9 +1,14 @@
+:root {
+  font-size: 62.5%;
+}
+
 $primary-color: #49e9ff;
 
 * {
   box-sizing: border-box;
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -59,10 +64,20 @@ body {
 
 // The game page
 .game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // width: 45em;
+
+  h1 {
+    width: 80%;
+  }
   .options {
     display: flex;
     flex-direction: row;
     color: #034a53;
+    width: 80%;
 
     .options-tag {
       background-color: #333333;

@@ -1,8 +1,8 @@
 const question = document.querySelector('.question')
 const optionsText = Array.from(document.querySelectorAll('.options-text'));
-
+console.log(optionsText);
 let currentQuestion = {};
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -243,12 +243,41 @@ startGame = () => {
 getNewQuestion = () => {
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length)
-    console.log(questionIndex);
+    currentQuestion = availableQuestions[questionIndex]
     question.innerText = currentQuestion.question;
+
+    optionsText.forEach(option => {
+      const number = option.dataset['number'];
+      option.innerText = currentQuestion["choice" + number]
+    });
+
+    availableQuestions.splice(questionIndex, 1)
+    
+    acceptingAnswers = true;
 }
 
+optionsText.forEach(option => {
+  option.addEventListener('click', e => {
+    if(!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset['number'];
+    console.log(selectedAnswer);
+
+    if (selectedAnswer === currentQuestion.answer) {
+      console.log("correct");
+    } else {
+      console.log("wrong answer");
+    }
+
+    getNewQuestion();
+
+    
+  })
+})
+
 startGame ();
-getNewQuestion();
 
 
 
