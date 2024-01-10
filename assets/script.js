@@ -231,7 +231,7 @@ let questions = [
 
 // constants 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 9;
 
 startGame = () => {
     questionCounter = 0;
@@ -241,6 +241,10 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
+    if(availableQuestions.length == 0 || questionCounter > MAX_QUESTIONS){
+      // go to the end page
+      window.location.assign('./end.html')
+    }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionIndex]
