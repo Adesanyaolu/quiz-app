@@ -94,4 +94,40 @@ body {
         margin: 10px 0px;
     }
   }
+
+  .correct {
+    background-color: green;
+  }
+  .wrong {
+    background-color: red;
+  }
+
+  #hud {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+    .hud-prefix {
+      text-align: center;
+      font-size: 2rem;
+      padding-right: 20px;
+    }
+
+    .hud-main-text {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+
+  #progressBar {
+    width: 15rem;
+    height: 4rem;
+    border: 0.3rem solid #333333;
+
+    #progressBarFull {
+      height: 3.4rem;
+      background-color: #333333;
+      width: 0%;
+    }
+  }
 }

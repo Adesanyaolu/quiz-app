@@ -82,3 +82,33 @@ body {
   padding: 10px 5px;
   margin: 10px 0px;
 }
+.game .correct {
+  background-color: green;
+}
+.game .wrong {
+  background-color: red;
+}
+.game #hud {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.game #hud .hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+  padding-right: 20px;
+}
+.game #hud .hud-main-text {
+  text-align: center;
+  padding: 10px;
+}
+.game #progressBar {
+  width: 15rem;
+  height: 4rem;
+  border: 0.3rem solid #333333;
+}
+.game #progressBar #progressBarFull {
+  height: 3.4rem;
+  background-color: #333333;
+  width: 0%;
+}

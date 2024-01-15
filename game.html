@@ -9,9 +9,23 @@
   <body>
     <main class="game">
       <a href="./index.html">Home</a>
+      <div id="hud">
+        <div id="hud-item">
+          <p id="progressText" class="hud-prefix">Question</p>
+          <div id="progressBar">
+            <div id="progressBarFull">
+
+            </div>
+          </div>
+        </div>
+        <div id="hud-item">
+          <p class="hud-prefix">Score</p>
+          <h1 class="hud-main-text" id="score">0</h1>
+        </div>
+      </div>
       <h1 class="question">Pick any of the answers below:</h1>
       <div class="options">
-        <p class="options-tag">A </p>
+        <p class="options-tag">A</p>
         <p class="options-text" data-number="1">Click to choose A</p>
       </div>
       <div class="options">
