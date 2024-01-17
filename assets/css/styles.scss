@@ -131,3 +131,34 @@ body {
     }
   }
 }
+
+#end {
+  display: flex;
+  flex-direction: column;
+
+  form {
+    input {
+      margin-bottom: 1rem;
+      width: 13rem;
+      padding: 1.5rem;
+    }
+  }
+}
+
+
+#highScores {
+  #highScoresList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 4rem;
+  }
+
+  .high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .high-score:hover {
+    transform: scale(1.025);
+  }
+};

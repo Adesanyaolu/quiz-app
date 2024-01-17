@@ -112,3 +112,26 @@ body {
   background-color: #333333;
   width: 0%;
 }
+
+#end {
+  display: flex;
+  flex-direction: column;
+}
+#end form input {
+  margin-bottom: 1rem;
+  width: 13rem;
+  padding: 1.5rem;
+}
+
+#highScores #highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+#highScores .high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+#highScores .high-score:hover {
+  transform: scale(1.025);
+}
